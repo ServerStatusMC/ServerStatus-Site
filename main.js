@@ -14,6 +14,8 @@ $(function () {
     $("#status").removeClass("text-success");
     $("#status").addClass("text-danger");
     $("#players").text(0);
+    $("#display").addClass("d-none");
+    $("#display").empty();
   });
   function displayPlayers(data) {
     $("#players").text(data.length);
@@ -23,6 +25,7 @@ $(function () {
       data.forEach(item => $("#display").append(`<img src="https://minotar.net/helm/${item}/56" class="mx-2 rounded" draggable="false" data-toggle="tooltip" data-placement="top" title="${item}">`));
     } else {
       $("#display").addClass("d-none");
+      $("#display").empty();
     }
   }
 });
