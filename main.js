@@ -1,5 +1,5 @@
 $(function () {
-  const socket = io();
+  const socket = io({transports: ["websocket", "polling"]});
   $("body").tooltip({selector: "[data-toggle=tooltip]"});
   socket.emit("is online");
   socket.emit("get players");
