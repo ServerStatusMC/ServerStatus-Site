@@ -15,7 +15,7 @@ html(lang="en")
     p#players
   script.
     $(function () {
-      const socket = io();
+      const socket = io({transports: ["websocket", "polling"]});
       socket.emit("is online");
       socket.emit("get players");
       socket.on("online", () => $("#status").text("Online"));
