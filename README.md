@@ -1,4 +1,5 @@
 # Server Status - Website
+**A real time server status plugin**
 
 *Note: this site is still a WIP and very subject to change*
 
